@@ -6,7 +6,12 @@ import random
 import re
 import sys
 
-
+def maxConsecutive1(input): 
+     input = bin(input)   
+     input = input[2:] 
+     print (max(map(len, input.split('0')))) 
+     
 
 if __name__ == '__main__':
     n = int(input())
+maxConsecutive1(n)
