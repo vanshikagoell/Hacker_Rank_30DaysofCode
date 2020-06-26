@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    arr = []
+for arr_i in range(6):
+    array = [int(arr_temp) for arr_temp in input().strip().split(' ')]
+    arr.append(array)
+
+maximun = -9 * 7
+
+for i in range(len(arr) - 2):
+    for j in range(len(arr[i]) - 2):
+        topleft = arr[i][j]
+        topcenter = arr[i][j + 1]
+        topright = arr[i][j + 2]
+        middlecenter = arr[i + 1][j + 1]
+        belowleft = arr[i + 2][j]
+        belowcenter = arr[i + 2][j + 1]
+        belowright = arr[i + 2][j + 2]
+        sumofHG = topleft + topcenter + topright + middlecenter + belowleft + belowcenter + belowright
+        maximun = max(sumofHG, maximun)
+
+print(maximun)
