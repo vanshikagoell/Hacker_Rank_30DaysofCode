@@ -1,10 +1,8 @@
 n = int(input())
 phoneBook = dict()
-
 for i in range(0, n):
     name, number = input().split()
     phoneBook[name] = number
-    
 for i in range(0, n):
     try:
         name = input()
